@@ -1,18 +1,18 @@
-function PasswordGen(userInfo){
+function PasswordGenNoUpper(userInfo){
     alert("Hello")
     var RandomPassword = [];
     var special = ["=", "|", "<", "=", ";", "*", "&"];
     var num = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-    var upper = ["A" ,"B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var num2 = userInfo;
     num2 = Number(num2);    
     var RandomPasswordLength = RandomPassword.length;
+
     if (num2 % 4 == 0) {
         while (RandomPasswordLength < num2){
             alert(RandomPasswordLength)
             var random = Math.floor((Math.random() * 25) + 1);
-            RandomPassword.push(upper[random]);
+            RandomPassword.push(lower[random]);
             random = Math.floor((Math.random() * 25) + 1);
             RandomPassword.push(lower[random]);
             random = Math.floor((Math.random() * 9) + 1);
@@ -28,7 +28,7 @@ function PasswordGen(userInfo){
         while (RandomPasswordLength < num2){
             alert(RandomPasswordLength);
             var random = Math.floor((Math.random() * 25) + 1);
-            RandomPassword.push(upper[random]);
+            RandomPassword.push(lower[random]);
             random = Math.floor((Math.random() * 6) + 1);
             RandomPassword.push(special[random]);
             random = Math.floor((Math.random() * 25) + 1);
@@ -46,7 +46,7 @@ function PasswordGen(userInfo){
         while (RandomPasswordLength < num2){
             alert(RandomPasswordLength) 
             var random = Math.floor((Math.random() * 25) + 1);
-            RandomPassword.push(upper[random]);
+            RandomPassword.push(lower[random]);
             random = Math.floor((Math.random() * 6) + 1);
             RandomPassword.push(special[random]);
             random = Math.floor((Math.random() * 25) + 1);
@@ -69,7 +69,7 @@ function PasswordGen(userInfo){
             if (i == 1){
                 alert(RandomPasswordLength) 
                 var random = Math.floor((Math.random() * 25) + 1);
-                RandomPassword.push(upper[random]);
+                RandomPassword.push(lower[random]);
                 random = Math.floor((Math.random() * 6) + 1);
                 RandomPassword.push(special[random]);
                 random = Math.floor((Math.random() * 25) + 1);
@@ -89,7 +89,7 @@ function PasswordGen(userInfo){
         for (var i = 4; i <= 8; i += 4){
             if (i == 4 || i == 8){
                 var random = Math.floor((Math.random() * 25) + 1);
-                RandomPassword.push(upper[random]);
+                RandomPassword.push(lower[random]);
                 random = Math.floor((Math.random() * 6) + 1);
                 RandomPassword.push(special[random]);
                 random = Math.floor((Math.random() * 25) + 1);
@@ -107,7 +107,7 @@ function PasswordGen(userInfo){
         for (var i = 5; i <= 10; i += 5) {
             if (i == 5 || i == 10){
                 var random = Math.floor((Math.random() * 25) + 1);
-                RandomPassword.push(upper[random]);
+                RandomPassword.push(lower[random]);
                 random = Math.floor((Math.random() * 6) + 1);
                 RandomPassword.push(special[random]);
                 random = Math.floor((Math.random() * 25) + 1);

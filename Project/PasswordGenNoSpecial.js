@@ -1,13 +1,14 @@
-function PasswordGen(userInfo){
-    alert("Hello")
+function PasswordGenNoSpecial(userInfo){
+    alert("No Secial func")
     var RandomPassword = [];
-    var special = ["=", "|", "<", "=", ";", "*", "&"];
     var num = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
     var upper = ["A" ,"B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var num2 = userInfo;
     num2 = Number(num2);    
     var RandomPasswordLength = RandomPassword.length;
+    alert(num2)
+
     if (num2 % 4 == 0) {
         while (RandomPasswordLength < num2){
             alert(RandomPasswordLength)
@@ -17,8 +18,7 @@ function PasswordGen(userInfo){
             RandomPassword.push(lower[random]);
             random = Math.floor((Math.random() * 9) + 1);
             RandomPassword.push(num[random]);
-            random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);
+            RandomPassword.push(lower[random]);
             StringPassword = RandomPassword.join('');
             alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
@@ -29,14 +29,12 @@ function PasswordGen(userInfo){
             alert(RandomPasswordLength);
             var random = Math.floor((Math.random() * 25) + 1);
             RandomPassword.push(upper[random]);
-            random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);
+            RandomPassword.push(lower[random]);
             random = Math.floor((Math.random() * 25) + 1);
             RandomPassword.push(lower[random]);
             random = Math.floor((Math.random() * 9) + 1);
             RandomPassword.push(num[random]);
-            random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]); 
+            RandomPassword.push(num[random]); 
             StringPassword = RandomPassword.join('');
             alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
@@ -47,16 +45,14 @@ function PasswordGen(userInfo){
             alert(RandomPasswordLength) 
             var random = Math.floor((Math.random() * 25) + 1);
             RandomPassword.push(upper[random]);
-            random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);
+            RandomPassword.push(lower[random]);
             random = Math.floor((Math.random() * 25) + 1);
             RandomPassword.push(lower[random]);
             random = Math.floor((Math.random() * 9) + 1);
             RandomPassword.push(num[random]);
             random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);
-            random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);
+            RandomPassword.push(upper[random]);
+            RandomPassword.push(num[random]);
             random = Math.floor((Math.random() * 25) + 1);
             RandomPassword.push(lower[random]);                            
             StringPassword = RandomPassword.join('');
@@ -68,21 +64,18 @@ function PasswordGen(userInfo){
         for (var i = 1; i <= 1; i ++){
             if (i == 1){
                 alert(RandomPasswordLength) 
-                var random = Math.floor((Math.random() * 25) + 1);
+                var random = random = Math.floor((Math.random() * 9) + 1);
+                RandomPassword.push(num[random]);
                 RandomPassword.push(upper[random]);
-                random = Math.floor((Math.random() * 6) + 1);
-                RandomPassword.push(special[random]);
                 random = Math.floor((Math.random() * 25) + 1);
                 RandomPassword.push(lower[random]);
                 random = Math.floor((Math.random() * 9) + 1);
                 RandomPassword.push(num[random]);
             }
-            random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);                           
+            RandomPassword.push(num[random]);                           
             RandomPassword.push(lower[random]);                         
             StringPassword = RandomPassword.join('');
             alert(StringPassword);
-            document.execCommand("copy");
         }
     }
     else if (num2 == 9){
@@ -90,16 +83,14 @@ function PasswordGen(userInfo){
             if (i == 4 || i == 8){
                 var random = Math.floor((Math.random() * 25) + 1);
                 RandomPassword.push(upper[random]);
-                random = Math.floor((Math.random() * 6) + 1);
-                RandomPassword.push(special[random]);
+                RandomPassword.push(lower[random]);
                 random = Math.floor((Math.random() * 25) + 1);
                 RandomPassword.push(lower[random]);
                 random = Math.floor((Math.random() * 9) + 1);
                 RandomPassword.push(num[random]);
             }
         }
-        random = Math.floor((Math.random() * 25) + 1);
-        RandomPassword.push(lower[random]);
+        RandomPassword.push(num[random]);
         StringPassword = RandomPassword.join('');
         alert(StringPassword);  
     }
@@ -108,14 +99,12 @@ function PasswordGen(userInfo){
             if (i == 5 || i == 10){
                 var random = Math.floor((Math.random() * 25) + 1);
                 RandomPassword.push(upper[random]);
-                random = Math.floor((Math.random() * 6) + 1);
-                RandomPassword.push(special[random]);
+                RandomPassword.push(lower[random]);
                 random = Math.floor((Math.random() * 25) + 1);
                 RandomPassword.push(lower[random]); 
                 random = Math.floor((Math.random() * 9) + 1);
                 RandomPassword.push(num[random]);
-                random = Math.floor((Math.random() * 6) + 1);
-                RandomPassword.push(special[random]);
+                RandomPassword.push(num[random]);
             }
         }
         random = Math.floor((Math.random() * 9) + 1);
