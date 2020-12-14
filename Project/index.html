@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Password Genarator</title>
+        <meta charset="utf-8">
+        
+    </head>
+
+    <body>
+        
+        <div><h1>Genarate a Password:</h1></div>
+        <form method="get" name="PasswordChoice" onsubmit="test()">
+            Password Length: <input type="number" id="PasswordLen" maxlength=3 onkeypress="return isNumber(event)"/><br>
+
+            Special Charachters: <input type="checkbox" name="specialChar" value="yes" checked/><br>
+            Numbers: <input type="checkbox" name="Numbers" value="yes" checked/><br>
+            Uppercase: <input type="checkbox" name="upperCase" value="yes" checked/><br>
+            Lowercase: <input type="checkbox" name="lowerCase" value="yes" checked/><br>
+
+            <input type="submit" name="Submit" value="Genarate Password"/>
+        </form> 
+
+        <div id="PasswordBox"></div>
+        <script src="PasswordGenarator.js"></script>
+        <script src="test.js"></script>
+        <script src="test2.js"></script>
+    </body>
+</html>
