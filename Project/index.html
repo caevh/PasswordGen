@@ -9,7 +9,7 @@
     <body>
         
         <div><h1>Genarate a Password:</h1></div>
-        <form method="get" name="PasswordChoice" onsubmit="test()">
+        <form method="get" name="PasswordChoice" onsubmit="PasswordType(this)">
             Password Length: <input type="number" id="PasswordLen" maxlength=3 onkeypress="return isNumber(event)"/><br>
 
             Special Charachters: <input type="checkbox" name="specialChar" value="yes" checked/><br>
