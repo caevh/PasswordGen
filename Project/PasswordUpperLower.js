@@ -1,5 +1,4 @@
 function PasswordGenUpperLower(userInfo, upper){
-    alert("Upper lower")
     var RandomPassword = [];
     var num2 = userInfo;
     num2 = Number(num2);    
@@ -10,42 +9,27 @@ function PasswordGenUpperLower(userInfo, upper){
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
         }
         while (RandomPasswordLength < num2){
-            alert(RandomPasswordLength)
-
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
-
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)].toLowerCase());
-
             StringPassword = RandomPassword.join('');
-            alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
         }
     }
     else if (num2 % 5 == 0 || num2 == 11 || num2 == 7) {
         if (num2 == 11){
-
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)].toLowerCase());
         }
         else if (num2 == 7){
-
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)].toLowerCase());
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
         }
-        while (RandomPasswordLength < num2){
-            
-            alert(RandomPasswordLength);
-
+        while (RandomPasswordLength < num2){           
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)].toLowerCase());
-
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
-
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)].toLowerCase());
-
-            RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)].toLowerCase()); 
-            
+            RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)].toLowerCase());         
             StringPassword = RandomPassword.join('');
-            alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
         }                    
     }

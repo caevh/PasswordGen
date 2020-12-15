@@ -5,47 +5,33 @@ function PasswordGenNumAndSpecial(userInfo, special, num){
     var RandomPasswordLength = RandomPassword.length;
     if (num2 % 2 == 0 || num2 == 9) {
         if (num2 == 9){
-            alert("In")
+
 
             RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
         }
         while (RandomPasswordLength < num2){
-            alert(RandomPasswordLength)
-
             RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
-
             RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)]);
-
             StringPassword = RandomPassword.join('');
-            alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
         }
     }
     else if (num2 % 5 == 0 || num2 == 11 || num2 == 7) {
         if (num2 == 11){
-
             RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)]);
         }
         else if (num2 == 7){
-
             RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
             RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)]);
         }
         while (RandomPasswordLength < num2){
-            
-            alert(RandomPasswordLength);
 
             RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
-
             RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)]);
             RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)]);
-
             RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
-
             RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
-            
             StringPassword = RandomPassword.join('');
-            alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
         }                    
     }

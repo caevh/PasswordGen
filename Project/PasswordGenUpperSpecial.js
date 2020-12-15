@@ -5,18 +5,13 @@ function PasswordGenUpperSpecial(userInfo, special, upper){
     var RandomPasswordLength = RandomPassword.length;
     if (num2 % 2 == 0 || num2 == 9) {
         if (num2 == 9){
-            alert("In")
-
             RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
         }
         while (RandomPasswordLength < num2){
-            alert(RandomPasswordLength)
-
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
             RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
 
             StringPassword = RandomPassword.join('');
-            alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
         }
     }
@@ -30,19 +25,12 @@ function PasswordGenUpperSpecial(userInfo, special, upper){
         }
         while (RandomPasswordLength < num2){
             
-            alert(RandomPasswordLength);
-
             RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
-
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
-
             RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
-
-            RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
-            
+            RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);           
             StringPassword = RandomPassword.join('');
-            alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
         }                    
     }

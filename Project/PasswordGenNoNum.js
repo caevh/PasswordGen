@@ -1,5 +1,4 @@
 function PasswordGenNoNum(userInfo, special, upper, lower){
-    alert("No Num func")
     var RandomPassword = [];
     var num2 = userInfo;
     num2 = Number(num2);    
@@ -7,7 +6,6 @@ function PasswordGenNoNum(userInfo, special, upper, lower){
 
     if (num2 % 4 == 0 || num2 == 9 || num2 == 6) {
         if (num2 == 9){
-            
             RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
         }
         else if (num2 == 6){
@@ -16,13 +14,11 @@ function PasswordGenNoNum(userInfo, special, upper, lower){
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
         }
         while (RandomPasswordLength < num2){
-            alert(RandomPasswordLength)
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
             RandomPassword.push(lower[Math.floor((Math.random() * 25) + 1)]);
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
             RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
             StringPassword = RandomPassword.join('');
-            alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
         }
     }
@@ -37,7 +33,7 @@ function PasswordGenNoNum(userInfo, special, upper, lower){
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
         }
         while (RandomPasswordLength < num2){
-            alert(RandomPasswordLength);
+
             var random = Math.floor((Math.random() * 25) + 1);
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
             RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
@@ -45,7 +41,6 @@ function PasswordGenNoNum(userInfo, special, upper, lower){
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
             RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]); 
             StringPassword = RandomPassword.join('');
-            alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
         }                    
     }

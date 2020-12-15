@@ -8,12 +8,9 @@ function PasswordGenNumUpper(userInfo, num, upper){
             RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)])
         }
         while (RandomPasswordLength < num2){
-            alert(RandomPasswordLength)
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
             RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)])
-
             StringPassword = RandomPassword.join('');
-            alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
         }
     }
@@ -26,16 +23,12 @@ function PasswordGenNumUpper(userInfo, num, upper){
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
         }
         while (RandomPasswordLength < num2){
-            
-            alert(RandomPasswordLength);
             RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)])
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
             RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
             RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)]);
-            RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)]); 
-            
+            RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)]);          
             StringPassword = RandomPassword.join('');
-            alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
         }                    
     }

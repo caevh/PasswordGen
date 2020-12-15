@@ -5,17 +5,12 @@ function PasswordGenLowerNum(userInfo, num, lower){
     var RandomPasswordLength = RandomPassword.length;
     if (num2 % 2 == 0 || num2 == 9) {
         if (num2 == 9){
-            alert("In")
             RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)]);
         }
         while (RandomPasswordLength < num2){
-            alert(RandomPasswordLength)
-
             RandomPassword.push(lower[Math.floor((Math.random() * 25) + 1)]);
             RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)]);
-
             StringPassword = RandomPassword.join('');
-            alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
         }
     }
@@ -31,19 +26,12 @@ function PasswordGenLowerNum(userInfo, num, lower){
         }
         while (RandomPasswordLength < num2){
             
-            alert(RandomPasswordLength);
-
             RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)]);
-
             RandomPassword.push(lower[Math.floor((Math.random() * 25) + 1)]);
             RandomPassword.push(lower[Math.floor((Math.random() * 25) + 1)]);
-
             RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)]);
-
             RandomPassword.push(num[Math.floor((Math.random() * 9) + 1)]); 
-            
             StringPassword = RandomPassword.join('');
-            alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
         }                    
     }
