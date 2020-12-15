@@ -9,28 +9,18 @@ function PasswordGenNoLower(userInfo){
     num2 = Number(num2);    
     var RandomPasswordLength = RandomPassword.length;
 
-    if (num2 % 2 == 0 || num2 == 9) {
-        if (num2 == 9){
-            alert("In")
-            var random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);
-        }
-        while (RandomPasswordLength < num2){
-            alert(RandomPasswordLength)
-            var random = Math.floor((Math.random() * 25) + 1);
-            RandomPassword.push(upper[random]);
-            random = Math.floor((Math.random() * 9) + 1);
-            RandomPassword.push(num[random]);
-            random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);
-            RandomPassword.push(upper[random]);
-            StringPassword = RandomPassword.join('');
-            alert(StringPassword);
-            RandomPasswordLength = RandomPassword.length;
-        }
-    }
-    else if (num2 % 5 == 0 || num2 == 11) {
+    if (num2 % 5 == 0 || num2 == 11 || num2 == 6) {
         if (num2 == 11){
+            var random = Math.floor((Math.random() * 9) + 1);
+            RandomPassword.push(num[random]);
+        }
+        if (num2 == 7){
+            var random = Math.floor((Math.random() * 9) + 1);
+            RandomPassword.push(num[random]);
+            RandomPassword.push(upper[random]);
+        }
+        if (num2 == 6){
+            alert("IN");
             var random = Math.floor((Math.random() * 9) + 1);
             RandomPassword.push(num[random]);
         }
@@ -50,44 +40,24 @@ function PasswordGenNoLower(userInfo){
             RandomPasswordLength = RandomPassword.length;
         }                    
     }
-    else if (num2 % 7 == 0) {
-        while (RandomPasswordLength < num2){
-            alert(RandomPasswordLength) 
-            var random = Math.floor((Math.random() * 25) + 1);
-            RandomPassword.push(upper[random]);
-            random = Math.floor((Math.random() * 6) + 1);
+    else if (num2 % 2 == 0 || num2 == 9) {
+        if (num2 == 9){
+            alert("In")
+            var random = Math.floor((Math.random() * 6) + 1);
             RandomPassword.push(special[random]);
+        }
+        while (RandomPasswordLength < num2){
+            alert(RandomPasswordLength)
+            var random = Math.floor((Math.random() * 25) + 1);
             RandomPassword.push(upper[random]);
             random = Math.floor((Math.random() * 9) + 1);
             RandomPassword.push(num[random]);
             random = Math.floor((Math.random() * 6) + 1);
             RandomPassword.push(special[random]);
-            random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);
-            RandomPassword.push(num[random]);                            
+            RandomPassword.push(upper[random]);
             StringPassword = RandomPassword.join('');
             alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
-        }
-    }
-    else if (num2 == 6) {
-        for (var i = 1; i <= 1; i ++){
-            if (i == 1){
-                alert(RandomPasswordLength) 
-                var random = Math.floor((Math.random() * 25) + 1);
-                RandomPassword.push(upper[random]);
-                random = Math.floor((Math.random() * 6) + 1);
-                RandomPassword.push(special[random]);
-                RandomPassword.push(upper[random]);
-                random = Math.floor((Math.random() * 9) + 1);
-                RandomPassword.push(num[random]);
-            }
-            random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);                           
-            RandomPassword.push(num[random]);                         
-            StringPassword = RandomPassword.join('');
-            alert(StringPassword);
-            document.execCommand("copy");
         }
     }
 }

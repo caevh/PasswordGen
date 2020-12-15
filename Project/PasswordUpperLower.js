@@ -1,4 +1,5 @@
 function PasswordGenUpperLower(userInfo){
+    alert("Upper lower")
     var RandomPassword = [];
     var upper = ["A" ,"B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     var num2 = userInfo;
@@ -22,10 +23,15 @@ function PasswordGenUpperLower(userInfo){
             RandomPasswordLength = RandomPassword.length;
         }
     }
-    else if (num2 % 5 == 0 || num2 == 11) {
+    else if (num2 % 5 == 0 || num2 == 11 || num2 == 7) {
         if (num2 == 11){
             var random = Math.floor((Math.random() * 25) + 1);
             RandomPassword.push(upper[random].toLowerCase());
+        }
+        else if (num2 == 7){
+            var random = Math.floor((Math.random() * 9) + 1);
+            RandomPassword.push(upper[random].toLowerCase());
+            RandomPassword.push(upper[random]);
         }
         while (RandomPasswordLength < num2){
             
@@ -44,26 +50,5 @@ function PasswordGenUpperLower(userInfo){
             alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
         }                    
-    }
-    else if (num2 % 7 == 0) {
-        while (RandomPasswordLength < num2){
-            alert(RandomPasswordLength) 
-            var random = Math.floor((Math.random() * 25) + 1);
-            RandomPassword.push(upper[random]);
-            random = Math.floor((Math.random() * 25) + 1);
-            RandomPassword.push(upper[random]);
-            random = Math.floor((Math.random() * 25) + 1);
-            RandomPassword.push(upper[random].toLowerCase());
-            RandomPassword.push(upper[random]);
-            random = Math.floor((Math.random() * 25) + 1);
-            RandomPassword.push(upper[random].toLowerCase());
-            random = Math.floor((Math.random() * 25) + 1);
-            RandomPassword.push(upper[random].toLowerCase());
-            random = Math.floor((Math.random() * 25) + 1);
-            RandomPassword.push(upper[random]);                            
-            StringPassword = RandomPassword.join('');
-            alert(StringPassword);
-            RandomPasswordLength = RandomPassword.length;
-        }
     }
 }
