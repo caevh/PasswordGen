@@ -6,15 +6,14 @@ function PasswordGenUpperSpecial(userInfo, special, upper){
     if (num2 % 2 == 0 || num2 == 9) {
         if (num2 == 9){
             alert("In")
-            var random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);
+
+            RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
         }
         while (RandomPasswordLength < num2){
             alert(RandomPasswordLength)
-            var random = Math.floor((Math.random() * 25) + 1);
-            RandomPassword.push(upper[random]);
-            random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);
+
+            RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
+            RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
 
             StringPassword = RandomPassword.join('');
             alert(StringPassword);
@@ -23,26 +22,24 @@ function PasswordGenUpperSpecial(userInfo, special, upper){
     }
     else if (num2 % 5 == 0 || num2 == 11 || num2 == 7) {
         if (num2 == 11){
-            var random = Math.floor((Math.random() * 9) + 1);
-            RandomPassword.push(upper[random]);
+            RandomPassword.push(upper[Math.floor((Math.random() * 9) + 1)]);
         }
         else if (num2 == 7){
-            var random = Math.floor((Math.random() * 9) + 1);
-            RandomPassword.push(special[random]);
-            RandomPassword.push(upper[random]);
+            RandomPassword.push(special[Math.floor((Math.random() * 9) + 1)]);
+            RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
         }
         while (RandomPasswordLength < num2){
             
             alert(RandomPasswordLength);
-            var random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);
-            random = Math.floor((Math.random() * 25) + 1);
-            RandomPassword.push(upper[random]);
-            RandomPassword.push(upper[random]);
-            random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);
-            random = Math.floor((Math.random() * 6) + 1);
-            RandomPassword.push(special[random]);
+
+            RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
+
+            RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
+            RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
+
+            RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
+
+            RandomPassword.push(special[Math.floor((Math.random() * 6) + 1)]);
             
             StringPassword = RandomPassword.join('');
             alert(StringPassword);

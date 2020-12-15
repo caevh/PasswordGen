@@ -4,7 +4,6 @@ function PasswordType(userInfo){
     var upper = ["A" ,"B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var num2 = document.getElementById("PasswordLen").value;
-    num2 = Number(num2);
     alert(num2)
     num2 = Number(num2);
     if (num2 > 0 && userInfo.specialChar.checked && userInfo.Numbers.checked && userInfo.upperCase.checked && userInfo.lowerCase.checked){
