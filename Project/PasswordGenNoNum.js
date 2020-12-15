@@ -23,7 +23,11 @@ function PasswordGenNoNum(userInfo){
             RandomPasswordLength = RandomPassword.length;
         }
     }
-    else if (num2 % 5 == 0) {
+    else if (num2 % 5 == 0 || num2 == 11) {
+        if (num2 == 11){
+            var random = Math.floor((Math.random() * 6) + 1);
+            RandomPassword.push(special[random]);
+        }
         while (RandomPasswordLength < num2){
             alert(RandomPasswordLength);
             var random = Math.floor((Math.random() * 25) + 1);
@@ -98,23 +102,5 @@ function PasswordGenNoNum(userInfo){
         StringPassword = RandomPassword.join('');
         alert(StringPassword);  
     }
-    else if (num2 == 11){
-        for (var i = 5; i <= 10; i += 5) {
-            if (i == 5 || i == 10){
-                var random = Math.floor((Math.random() * 25) + 1);
-                RandomPassword.push(upper[random]);
-                random = Math.floor((Math.random() * 6) + 1);
-                RandomPassword.push(special[random]);
-                random = Math.floor((Math.random() * 25) + 1);
-                RandomPassword.push(lower[random]); 
-                RandomPassword.push(upper[random]);
-                random = Math.floor((Math.random() * 6) + 1);
-                RandomPassword.push(special[random]);
-            }
-        }
-        RandomPassword.push(special[random]);
-        StringPassword = RandomPassword.join('');
-        alert(StringPassword);
-        RandomPasswordLength = RandomPassword.length;
-        }
+
 }
