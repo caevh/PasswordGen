@@ -9,7 +9,7 @@ function PasswordGenNoLower(userInfo){
     num2 = Number(num2);    
     var RandomPasswordLength = RandomPassword.length;
 
-    if (num2 % 5 == 0 || num2 == 11 || num2 == 6) {
+    if (num2 % 5 == 0 || num2 == 11) {
         if (num2 == 11){
             var random = Math.floor((Math.random() * 9) + 1);
             RandomPassword.push(num[random]);
@@ -18,11 +18,6 @@ function PasswordGenNoLower(userInfo){
             var random = Math.floor((Math.random() * 9) + 1);
             RandomPassword.push(num[random]);
             RandomPassword.push(upper[random]);
-        }
-        if (num2 == 6){
-            alert("IN");
-            var random = Math.floor((Math.random() * 9) + 1);
-            RandomPassword.push(num[random]);
         }
         while (RandomPasswordLength < num2){
             alert(RandomPasswordLength);
@@ -45,6 +40,11 @@ function PasswordGenNoLower(userInfo){
             alert("In")
             var random = Math.floor((Math.random() * 6) + 1);
             RandomPassword.push(special[random]);
+        }
+        else if (num2 == 6){
+            var random = Math.floor((Math.random() * 9) + 1);
+            RandomPassword.push(upper[Math.floor((Math.random() * 25) + 1)]);
+            RandomPassword.push(num[random]);
         }
         while (RandomPasswordLength < num2){
             alert(RandomPasswordLength)

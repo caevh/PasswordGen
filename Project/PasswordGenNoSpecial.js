@@ -9,9 +9,14 @@ function PasswordGenNoSpecial(userInfo){
     var RandomPasswordLength = RandomPassword.length;
     alert(num2)
 
-    if (num2 % 4 == 0 || num2 == 9) {
+    if (num2 % 4 == 0 || num2 == 9 || num2 == 6) {
         if (num2 == 9){
             var random = Math.floor((Math.random() * 9) + 1);
+            RandomPassword.push(num[random]);
+        }
+        else if (num2 == 6){
+            var random = Math.floor((Math.random() * 9) + 1);
+            RandomPassword.push(upper[Math.floor((Math.random() * 9) + 1)]);
             RandomPassword.push(num[random]);
         }
         while (RandomPasswordLength < num2){
@@ -52,23 +57,5 @@ function PasswordGenNoSpecial(userInfo){
             alert(StringPassword);
             RandomPasswordLength = RandomPassword.length;
         }                    
-    }
-    else if (num2 == 6) {
-        for (var i = 1; i <= 1; i ++){
-            if (i == 1){
-                alert(RandomPasswordLength) 
-                var random = random = Math.floor((Math.random() * 9) + 1);
-                RandomPassword.push(num[random]);
-                RandomPassword.push(upper[random]);
-                random = Math.floor((Math.random() * 25) + 1);
-                RandomPassword.push(lower[random]);
-                random = Math.floor((Math.random() * 9) + 1);
-                RandomPassword.push(num[random]);
-            }
-            RandomPassword.push(num[random]);                           
-            RandomPassword.push(lower[random]);                         
-            StringPassword = RandomPassword.join('');
-            alert(StringPassword);
-        }
     }
 }
