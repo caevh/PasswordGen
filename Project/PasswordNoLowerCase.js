@@ -1,15 +1,12 @@
-function PasswordGenNoLower(userInfo){
+function PasswordGenNoLower(userInfo, special, num, upper){
     alert("Hello")
     var RandomPassword = [];
-    var special = ["=", "|", "<", "=", ";", "*", "&"];
-    var num = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-    var upper = ["A" ,"B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
     var num2 = userInfo;
     num2 = Number(num2);    
     var RandomPasswordLength = RandomPassword.length;
 
-    if (num2 % 5 == 0 || num2 == 11) {
+    if (num2 % 5 == 0 || num2 == 11 || num2 == 7) {
         if (num2 == 11){
             var random = Math.floor((Math.random() * 9) + 1);
             RandomPassword.push(num[random]);

@@ -1,8 +1,6 @@
-function PasswordGenLowerSpecial(userInfo){
+function PasswordGenLowerSpecial(userInfo, special, lower){
     alert("debug")
     var RandomPassword = [];
-    var special = ["=", "|", "<", "=", ";", "*", "&"];
-    var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var num2 = userInfo;
     num2 = Number(num2);    
     var RandomPasswordLength = RandomPassword.length;

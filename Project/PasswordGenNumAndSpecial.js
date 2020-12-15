@@ -1,7 +1,5 @@
-function PasswordGenNumAndSpecial(userInfo){
+function PasswordGenNumAndSpecial(userInfo, special, num){
     var RandomPassword = [];
-    var special = ["=", "|", "<", "=", ";", "*", "&"];
-    var num = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];   
     var num2 = userInfo;
     num2 = Number(num2);    
     var RandomPasswordLength = RandomPassword.length;

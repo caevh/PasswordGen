@@ -1,7 +1,5 @@
-function PasswordGenUpperSpecial(userInfo){
+function PasswordGenUpperSpecial(userInfo, special, upper){
     var RandomPassword = [];
-    var special = ["=", "|", "<", "=", ";", "*", "&"];
-    var upper = ["A" ,"B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     var num2 = userInfo;
     num2 = Number(num2);    
     var RandomPasswordLength = RandomPassword.length;
