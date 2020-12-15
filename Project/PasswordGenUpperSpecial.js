@@ -21,7 +21,7 @@ function PasswordGenUpperSpecial(userInfo){
     else if (num2 % 5 == 0 || num2 == 11) {
         if (num2 == 11){
             var random = Math.floor((Math.random() * 9) + 1);
-            RandomPassword.push(num[random]);
+            RandomPassword.push(upper[random]);
         }
         while (RandomPasswordLength < num2){
             
