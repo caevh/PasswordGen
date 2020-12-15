@@ -23,4 +23,29 @@ function PasswordType(userInfo){
         alert("No special");
         PasswordGenNoSpecial(num2);
     }
+    else if (num2 > 0 && userInfo.upperCase.checked && userInfo.lowerCase.checked){
+        alert("Upper and lower");
+        PasswordGenUpperLower(num2);
+    }
+    else if (num2 > 0 && userInfo.upperCase.checked && userInfo.Numbers.checked){
+        alert("Num and upper")
+        PasswordGenNumUpper(num2);
+    }
+    else if (num2 > 0 && userInfo.upperCase.checked && userInfo.specialChar.checked){
+        alert("UpperCase and special");
+        PasswordGenUpperSpecial(num2);
+    }
+    else if (num2 > 0 && userInfo.lowerCase.checked && userInfo.Numbers.checked){
+        alert("Lower and num");
+        PasswordGenLowerNum(num2);
+    }
+    else if (num2 > 0 && userInfo.lowerCase.checked && userInfo.specialChar.checked){
+        alert("lower and special");
+        PasswordGenLowerSpecial(num2);
+    }
+    else if (num2 > 0 && userInfo.Numbers.checked && userInfo.specialChar.checked){
+        alert("Num and special");
+        PasswordGenNumAndSpecial(num2);
+    }
+
 }
